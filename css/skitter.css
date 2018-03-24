@@ -49,12 +49,12 @@
 .skitter .prev_button {
 	position: absolute;
 	top: 50%;
-	left: 35px;
+	left: 0;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	z-index: 152;
-	width: 42px;
-	height: 42px;
+	width: 50px;
+	height: 50px;
 	overflow: hidden;
 	text-indent: -9999em;
 	transition: all 0.2s
@@ -62,12 +62,12 @@
 .skitter .next_button {
 	position: absolute;
 	top: 50%;
-	right: 35px;
+	right: 0;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	z-index: 152;
-	width: 42px;
-	height: 42px;
+	width: 50px;
+	height: 50px;
 	overflow: hidden;
 	text-indent: -9999em;
 	transition: all 0.2s
@@ -295,22 +295,17 @@
 .skitter .focus_button:hover {
 	opacity: 0.5
 }
-.skitter .focus_button, .skitter .next_button, .skitter .prev_button, .skitter .play_pause_button {
-	display: block;
-	background: url("../images/skitter/sprite-default.png") no-repeat;
-	background-size: 84px auto
-}
 .skitter .next_button {
-	background-position: -0px -42px;
-	width: 42px;
-	height: 42px
+	background:url(../images/btn_next.png) center right no-repeat;
+	width: 50px;
+	height: 50px;
 }
 .skitter .prev_button {
-	background-position: -42px -42px;
-	width: 42px;
-	height: 42px
+	background:url(../images/btn_prev.png) center left no-repeat;
+	width: 50px;
+	height: 50px;
 }
-.skitter .play_pause_button {
+/*.skitter .play_pause_button {
 	background-position: -0px -0px;
 	width: 42px;
 	height: 42px
@@ -632,13 +627,14 @@
 	background-color: #fff;
 	border-radius: 0;
 	height: 2px
-}
+}*/
 
 @media (max-width: 1024px) {
 .skitter .info_slide_dots, .skitter .info_slide {
 	display: none
 }
 }
+
 @media (max-width: 640px) {
 .skitter {
 	position: relative;
@@ -646,11 +642,21 @@
 	height: 500px;
 	background: black
 }
+.label_skitter {
+    top: 50%;
+    transform: translateY(-50%);
+}
 	.skitter img{
 		width: 200%;
 	}
 	#index #mainvisual img {
     max-width: 200%;
+}
+
+.skitter .prev_button, .skitter .next_button {
+	width: 40px;
+	height: 40px;
+	background-size:40px;
 }
 }
 .skitter-spinner {
